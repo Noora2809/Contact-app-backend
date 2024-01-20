@@ -49,7 +49,7 @@ contactServer.get('/get-a-contact/:id',(req,res)=>{
 })
 
 
-//Api call for updating a particular contact
+// Api call for updating a particular contact
 contactServer.post('/update-a-contact/:id',(req,res)=>{
   logic.updateContact(req.params.id,req.body.name,req.body.address,req.body.phone,req.body.email).then((response)=>{
     res.status(response.statusCode).json(response)
